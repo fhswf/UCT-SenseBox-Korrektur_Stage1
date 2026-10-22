@@ -1,0 +1,42 @@
+# UCT Microservice Configuration
+
+data:
+  db:
+    dbname: ""
+
+model:
+  hidden_units: [244, 204]
+
+preprocessing:
+  number_of_neighbors: [5, 2] # considered / used neighbors
+  neighboring_senseBoxes: true
+
+  # Definition der Eingangsgrößen für die Feature-Listen
+  SB_measured_values:
+    temperature: ["value"]
+    humidity: ["value"]
+    pressure: ["value"]
+    lux: ["value"]
+    uv: ["value"]
+
+  measured_values_neighbors:
+    temperature: ["value"]
+    humidity: ["value"]
+    pressure: ["value"]
+    lux: ["value"]
+    uv: ["value"]
+
+  boundaries:
+    temperature: [-20.0, 50.0]
+  
+  specific_values:
+    temperature: [0.0]
+
+  feature_engineering:
+    measurement_time_handling:
+      extract_time: true          # Erzeugt hour_sin/cos
+      extract_doy: true           # Erzeugt doy_cos
+
+startup:
+  retry_interval_seconds: 5
+  max_retries: 0

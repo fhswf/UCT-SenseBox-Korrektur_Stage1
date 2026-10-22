@@ -1,0 +1,12 @@
+services:
+  uct-ki-microservice-s1:
+    build: .
+    container_name: uct-ki-microservice-s1
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - /path/to/logs/:/app/logs
+    user: "UID:GID" # nodered-docker user (UID:GID)
