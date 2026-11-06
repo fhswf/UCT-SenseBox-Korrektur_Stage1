@@ -62,4 +62,4 @@ Für den lokalen Betrieb ohne Docker wird Python 3.12 benötigt; die Abhängigke
 
 Copyright 2026 Urban Climate Twin, Fachhochschule Südwestfalen
 
-Lizenziert unter der [Apache License 2.0](LICENSE).
+Lizenziert unter der [Apache License 2.0](LICENSE.md).
